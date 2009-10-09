@@ -4,11 +4,11 @@ require 'rake'
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
-    gem.name = "concerned_with"
+    gem.name = "matid-concerned_with"
     gem.summary = "Simple way to separate model and controller concerns into separate files."
     gem.email = "matid@matid.net"
     gem.homepage = "http://github.com/matid/concerned_with"
-    gem.authors = ["Mateusz Drożdżyński"]
+    gem.authors = ["Mateusz Drozdzynski"]
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   Jeweler::GemcutterTasks.new
