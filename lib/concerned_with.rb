@@ -16,3 +16,6 @@ module ConcernedWith
     end
   end
 end
+
+ActiveRecord::Base.send(:extend, ConcernedWith::ActiveRecord)
+ActionController::Base.send(:extend, ConcernedWith::ActionController)
