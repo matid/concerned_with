@@ -1,7 +1,7 @@
 ConcernedWith
 =============
 
-Simple way to separate model concerns into separate files. Code is from Rick Olson's altered_beast project.
+Simple way to separate model and controller concerns into separate files. Code is from Rick Olson's altered_beast project.
 
 
 Example
@@ -24,5 +24,17 @@ class User < ActiveRecord::Base
   end
 end
 
+#app/controllers/application_controller.rb
+class ApplicationController < ActionController::Base
+  concerned_with :authentication
+end
 
-Copyright (c) 2008 Jake Howerton, released under the MIT license
+#app/controllers/application/authentication.rb
+class ApplicationController < ActionController::Base
+  def logged_in?
+    false
+  end
+end
+
+
+Copyright (c) 2008 Jake Howerton, 2009 Mateusz Drożdżynski, released under the MIT license
